@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32*32" href="ecology_10104684.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=VT323&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+    <title>Gallery</title>
+</head>
+<body id="gallery-body">
+    <div id="header-container">
+        <script src="header.js"></script>
+    </div>
+    <div class="container">
+        <div class="photo">
+            <img src="https://img.freepik.com/free-photo/beautiful-butterfly-nature_23-2150445577.jpg?t=st=1722371329~exp=1722374929~hmac=68312de7cde461565e2c4e666d7700da714f53fd733cdbd9b7ae9136eafea38f&w=740" alt="photo">            
+        </div>
+        <div class="photo">
+            <img src="https://img.freepik.com/free-photo/boatman-punting-boat-river-arashiyama-autumn-season-along-river-kyoto-japan_335224-56.jpg?t=st=1722371410~exp=1722375010~hmac=b94d487efee0506dc749191d4e6bce6782d5834b7dfcc7313bc519c0a02d01a4&w=740" alt="photo">            
+        </div>
+        <div class="photo">
+            <img src="https://img.freepik.com/free-photo/beautiful-green-grassy-field-fluffy-cloud-formations_181624-28340.jpg?t=st=1722371497~exp=1722375097~hmac=d5d04ea8c1d8edc613efde56cb499177f1285d67f8e10c9907da4643a96a3035&w=740" alt="photo">            
+        </div>
+        <div class="photo">
+            <img src="https://img.freepik.com/free-photo/beautiful-view-tranquil-desert-clear-sky-captured-morocco_181624-8496.jpg?t=st=1722371121~exp=1722374721~hmac=422f4a3cacfa7a130c57dbdd1eb9b4be806ae2aaa0354c2c037ad9d7e1a1d507&w=740" alt="photo">            
+        </div>
+        <div class="photo">
+            <img src="https://img.freepik.com/free-photo/beautiful-tropical-beach-sea-ocean-with-white-cloud-blue-sky-copyspace_74190-8663.jpg?t=st=1722370953~exp=1722374553~hmac=48f3df93a24333fced5b277c6973a8657de953f3bba47442fc6e9603888db6e4&w=740" alt="photo">            
+        </div>
+
+        </div>
+
+        <div class="photo-preview" id="photo-preview">
+            <span><ion-icon name="close-outline" onclick="closePreview()"></ion-icon></span>
+            <img src="icebear-2199534.jpg" alt="photo-preview">
+        </div>
+        <div id="footer-container">
+        <script src="footer.js"></script>
+    </div>
+    <script>
+        document.querySelectorAll(' .container .photo img ').forEach(img => {
+            img.onclick = () =>{
+                document.querySelector('#photo-preview').style= ' display: grid;' ;
+                document.querySelector('#photo-preview img').src = img.getAttribute('src');
+            }
+        })
+        function closePreview(){
+            
+            document.querySelector('#photo-preview').style= ' display: npne;' ;
+        }
+    </script>
+</body>
+</html>

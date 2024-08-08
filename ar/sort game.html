@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32*32" href="../ecology_10104684.png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="../main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=VT323&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Changa:wght@200..800&display=swap" rel="stylesheet">
+  <title>لعبة إعادة التدوير والفرز</title>
+
+</head>
+<body class="game-body ar">
+  <div  id="alert" style="display: none;">
+
+    <div class="text" id="alertWrong"  style="display: none;">
+      <div class="head" >
+        <button id="close" onclick="document.getElementById('alert').style.display='none';document.getElementById('alertRight').style.display='none';">x</button>
+        <img src="../wrong-100.jpg" alt="">
+        <h3 class="wrong">حاول مرة اخرى</h3>
+        <p>ضع العنصر في الصندوق الصحيح</p>
+      </div>
+    </div>
+      <div class="text" id="alertRight"  style="display:none;">
+        <div class="head" >
+          <button id="close" onclick="document.getElementById('alert').style.display='none';document.getElementById('alertWrong').style.display='none';">x</button>
+          <img src="../right-100.jpg" alt="">
+          <h3 class="right">عمل جيد</h3>
+          <p>لقد وضعت جميع العناصر في الصناديق الصحيحة</p>
+          
+      </div>
+    </div>
+      
+    </div>
+  </div>
+  <div class="contents" id="items-container">
+    <div class="item"  draggable="true"><img src="../game_img/pl_b3.png"id="plastic-item-1"></div>
+    <div class="item"  draggable="true"><img src="../game_img/pl_b.png" id="plastic-item-2"></div>
+    <div class="item"  draggable="true"><img src="../game_img/pl_b2.png"id="plastic-item-3" ></div>
+    <div class="item"  draggable="true"><img src="../game_img/book.png" id="paper-item-1"></div>
+    <div class="item"  draggable="true"><img src="../game_img/box.png" id="paper-item-2"></div>
+    <div class="item"  draggable="true"><img src="../game_img/pa_np.png" id="paper-item-3"></div>
+    <div class="item"  draggable="true"><img src="../game_img/glass-b.png" id="glass-item-1"></div>
+    <div class="item"  draggable="true"><img src="../game_img/glass-b2.png" id="glass-item-2"></div>
+    <div class="item"  draggable="true"><img src="../game_img/glass-g.png" id="glass-item-3"></div>
+  </div>
+  <div class="container">
+    <div class="bin" id="paper-bin"><div class="bin-img" id="bin1"></div></div>
+    <div class="bin" id="glass-bin"><div class="bin-img" id="bin2"></div></div>
+    <div class="bin" id="plastic-bin"><div class="bin-img" id="bin3"></div></div>
+  </div>
+  <script>
+    // JavaScript code for the game
+    const items = document.querySelectorAll('.item');
+    const bins = document.querySelectorAll('.bin');
+    let correctItems = 0;
+    
+    items.forEach(item => {
+      item.addEventListener('dragstart', dragStart);
+    });
+    
+    bins.forEach(bin => {
+      bin.addEventListener('dragover', dragOver);
+      bin.addEventListener('drop', drop);
+    });
+    
+    function dragStart(e) {
+      e.dataTransfer.setData('text', e.target.id);
+    }
+    
+    function dragOver(e) {
+      e.preventDefault();
+    }
+    
+    function drop(e) {
+      e.preventDefault();
+      const itemId = e.dataTransfer.getData('text');
+      const item = document.getElementById(itemId);
+      const binId = this.id;
+      if (canDropInBin(itemId, binId)) {
+        this.appendChild(item);
+        correctItems++;
+        if (correctItems == items.length) {
+          document.getElementById('alert').style.display="block";
+          document.getElementById('alertRight').style.display="block";
+        }
+      } else if (correctItems !== items.length){
+        document.getElementById('alert').style.display="block";
+        document.getElementById('alertWrong').style.display="block";
+      }else{
+        document.getElementById('alert').style.display="none";
+        document.getElementById('alertRight').style.display="none";
+        document.getElementById('alertWrong').style.display="none";
+      }
+    }
+    
+    function canDropInBin(itemId, binId) {
+      switch (itemId) {
+        case 'plastic-item-1':
+          return binId === 'plastic-bin';
+        case 'plastic-item-2':
+          return binId === 'plastic-bin';
+        case 'plastic-item-3':
+          return binId === 'plastic-bin';
+        case 'paper-item-1':
+          return binId === 'paper-bin';
+        case 'paper-item-2':
+          return binId === 'paper-bin';
+        case 'paper-item-3':
+          return binId === 'paper-bin';
+        case 'glass-item-1':
+          return binId === 'glass-bin';
+        case 'glass-item-2':
+          return binId === 'glass-bin';
+        case 'glass-item-3':
+          return binId === 'glass-bin';
+        default:
+          return false;
+      }
+    }
+  </script>
+<footer>
+  <div class="logo">
+      <img src="../logo w.png" alt="">
+  </div>
+  <div class="links2">
+      <ul>
+          <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> الصفحة الرئيسية</button></li>
+          <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon>عنَا</button></li>
+          <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> فيديوهات</button></li>
+          <li><button ><ion-icon name="game-controller"></ion-icon> إلعب معي</button>
+          <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> مقالات</button>
+          <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon>تواصل معنا</button></li>
+      </ul>
+      
+  </div>
+  <div class="social">
+      <a href="https://www.facebook.com/profile.php?id=61556130872330" target="_blank" rel="noopener noreferrer"><button class="f" ><ion-icon name="logo-facebook"></ion-icon></button></a>
+      <a href="https://www.instagram.com/earthcarekids1?igsh=MXd2NWJ6cmUxdzlkeg==" target="_blank" rel="noopener noreferrer"><button class="i"><ion-icon name="logo-instagram"></ion-icon></button></a>
+      <a href="https://www.youtube.com/@EARTHCAREKIDS" target="_blank" rel="noopener noreferrer"><button class="y"><ion-icon name="logo-youtube"></ion-icon></button></a>
+      <a href="https://twitter.com/earth_care_kids" target="_blank" rel="noopener noreferrer"><button class="t"><ion-icon name="logo-twitter"></ion-icon></button></a>
+  </div>
+  <div class="lan">
+    <a href="../sort game.html"><ion-icon name="language"></ion-icon></a>
+</div>
+</footer>
+</body>
+</html>
+</html>

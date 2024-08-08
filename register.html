@@ -1,0 +1,57 @@
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" type="image/png" sizes="32*32" href="ecology_10104684.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+      
+     <title>EarthCareKids - Registration and Login</title>
+     <link rel="stylesheet" href="style.css">
+     <style></style>
+ </head>
+ <body id="login-body">
+    <script src="signup.js">
+    </script>
+    <div class="back">
+        <a href="index.html#join"><ion-icon name="chevron-back-outline"></ion-icon></a>
+    </div>
+ <div class="container">
+     <div class="header">
+         <h1>EarthCareKids</h1>
+     </div>
+ 
+     <div class="formContainer">
+         <h2>Register</h2>
+         <form id="form">
+             <input type="text" placeholder="Username" name="username" id="username" >
+             <input type="email" placeholder="Email" name="email" name="email" >
+             <input type="password" placeholder="Password" name="password" id="password" >
+             <input type="date" name="birthdate" id="birthdate" >
+             <select name="gender"  id="gender">
+                 <option value="">Select Gender</option>
+                 <option value="Male">Male</option>
+                 <option value="Female">Female</option>
+             </select>
+             <button id="signup" name="signup">Sign Up</button>
+         </form>
+     </div>
+ 
+     <div class="formContainer">
+         <h2>Login</h2>
+         <form action="login.php" method="post">
+             <input type="email" placeholder="Email" name="email" required>
+             <input type="password" placeholder="Password" name="password" required>
+             <button type="submit">Login</button>
+         </form>
+     </div>
+ 
+    </div>
+    
+</body>
+ </html>
+ 

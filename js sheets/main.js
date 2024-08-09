@@ -15,9 +15,4 @@ function hiSound() {
         }
     }
 
-    
-
-    function yaya(){
-        alert(9);
-    }
 

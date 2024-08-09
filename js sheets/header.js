@@ -8,7 +8,7 @@ var header = `
                         <li><button onclick="window.location='sort game.html'"> Games</button>
                         <li><button onclick="window.location='blogs.html'"> BLOGS</button>
                         <li><button onclick="window.location='contact.html'"> CONTACT</button></li>
-                        <li><button onclick="window.location=''"> Shop</button></li>
+                        <li><button onclick="window.location='gallery.html'"> gallery</button></li>
 
                     </ul>
 
@@ -56,7 +56,7 @@ var header = `
                                 <li><button onclick="window.location='sort game.html'"> games</button>
                                 <li><button onclick="window.location='blogs.html'"> blogs</button>
                                 <li><button onclick="window.location='contact.html'"> contact</button></li>
-                                <li><button onclick="window.location=''"> shop</button></li>
+                                <li><button onclick="window.location='gallery.html'"> gallery</button></li>
         
                             </ul>
                         </div>
@@ -70,9 +70,6 @@ var header = `
                     </div>
                 </div>
             </aside>
-            <script>
-               
-            </script>
         
             
         

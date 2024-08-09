@@ -1,7 +1,7 @@
 var footer = `
     <footer>
     <div class="logo">
-        <img src="logo w.png" alt="">
+        <img src="imgs/logo w.png" alt="">
     </div>
     <div class="links2">
         <ul>

@@ -1,13 +1,4 @@
 var header = `
-            <div id="searchDiv">
-                <button id="searchIcon" onclick="hideSearch()">
-                    <ion-icon name="close-outline"></ion-icon>
-                </button>
-                <div class="bar">
-                    <input type="text" placeholder="search here..." id="searchInput">
-                    <button><ion-icon name="search-outline"></ion-icon></button>
-                </div>
-            </div>
             <header id="header">
                 <nav id="nav">
                     <ul>
@@ -29,24 +20,19 @@ var header = `
                         </button>
                     </div>
                     <div class="logo">
-                        <img src="new logo3.png" alt="logo">
+                        <img src="imgs/new logo3.png" alt="logo">
                     </div>
                     <div class="search">
-                        <button id="searchIcon" onclick="showSearch()">
-                            <ion-icon name="search-outline"></ion-icon>
-                        </button>
                     </div>
                     
                 </div>
             </header>
             <nav id="sNav">
                 <div class="search">
-                    <button id="searchIcon" onclick="showSearch()">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </button>
+                    
                 </div>
                 <div class="logo">
-                    <img src="new logo3.1.png" alt="logo">
+                    <img src="imgs/new logo3.1.png" alt="logo">
                 </div>
                 <div class="burger-icon">
                     <button onclick="showMenu()">

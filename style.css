@@ -1728,6 +1728,69 @@ color: var(--main-color);
         }
     }
 }
+/*---------------------------------------------------------------------------------------*/
+/*------------------------------------talk to animal-css-----------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+.talk-to-animal{
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5%;
+        gap: 50px;
+        min-height: calc(100vh - 100px);
+        .part{
+            flex: 1;
+            background: #fff;
+            border: 1px solid #000;
+            border-radius: 10px;
+            min-width: 300px;
+            padding: 20px;
+
+        }
+        .preview{
+            .animal{
+                border: .5px solid #000;
+                height: 100%;
+                min-height: 300px;
+                border-radius: 5px;
+            }
+        }
+        .chat{
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                height: 100%;
+                textarea{
+                    resize: none;
+                    height: calc(100% - 70px);
+                    overflow: auto;
+                    padding: 10px;
+                    outline:none;
+                    border-radius: 5px;
+                    border: .5px solid #000 ;
+                    font-size: 20px;
+                }
+                button{
+                    color: #fff;
+                    background: var(--main-color);
+                    border: 0;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    font-size: 20px;
+                    text-transform: capitalize;
+                    padding: 10px 0;
+                    cursor: pointer;
+                    &:hover{
+                    }
+                }
+            }
+        }
+    }
+}
   /*---------------------------------------------------------------------------------------*/
   /*------------------------------------responsive-css-------------------------------------*/
   /*---------------------------------------------------------------------------------------*/

@@ -21,29 +21,19 @@
     <div class="container">
         <div class="preview part">
             <div class="animal">
-                <svg width="300" height="200" viewBox="0 0 300 200">
-                    <ellipse cx="150" cy="120" rx="80" ry="60" fill="green" />
-                  
-                    <circle cx="180" cy="90" r="30" fill="green" />
-                  
-                    <path d="M 220 140 L 250 120 L 220 100 Z" fill="green" />
-                  
-                    <path d="M 80 140 L 50 120 L 80 100 Z" fill="green" />
-                  
-                    <circle cx="185" cy="85" r="5" fill="white" />
-                    <circle cx="175" cy="85" r="5" fill="white" />
-                  
-                    <path d="M 175 95 L 185 95" stroke="black" stroke-width="2" />
-                  </svg>
-                  
+                <img src="imgs/sea turtle.jpg" alt="">  
             </div>
         </div>
         <div class="chat part">
-            <form>
-                <textarea id="user input"></textarea>
-                <button type="submit">send <ion-icon name="send-sharp"></ion-icon></button>
-            </form>
+            <div class="form">
+                <textarea id="input"></textarea>
+                <button type="submit" id="sendBtn">send <ion-icon name="send-sharp"></ion-icon></button>
+            </div>
         </div>
     </div>
+    <div id="footer-container">
+        <script src="js sheets/footer.js"></script>
+    </div>
+    <script src="talk to animal/sea turtle/talk.js"></script>
 </body>
 </html>

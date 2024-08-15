@@ -904,42 +904,153 @@ footer{
 /*------------------------------------about-css-----------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
 .about-body{
-    width: 100% ;
-    height: auto;
-    .contain{
-        width: 100%;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        font-family: var(--secondary-font);
-        .main{
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            .list{
-                h2{
-                    font-size: 30px;
-                    font-weight: bold;
-                    text-transform: uppercase;
-                    margin: 20px 0;
-                    color: var(--main-color);
-                    text-decoration: solid underline;
-                }
-                ul{
-                    list-style:square inside;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                    li{
-                        font-size: 20px;
-                        font-weight: 600;
-                    }
-                }
-            }
-        }
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: capitalize;
+    background: #f2e9e2;
+
+
+    .aecc{
+        margin: 150px auto;
+        text-align: center;
+        width: 71%;
+        padding:  2rem;
+        border: var(--main-color)  solid 3px ;
+        border-radius: 10px;
+    }
+    .aecc h2{
+        font-size: 50px;
+        margin: 20px auto;
+        width: 900px;
+        font-weight: 400;
+    }
+    .aecc p{
+        font-size: 20px;
+        width: 900px;
+        margin: 20px auto;
+        line-height: 30px;
+        color: #585858;
+    }
+    .ours{
+        display: flex;
+        justify-content: center;
+        margin: 150px auto;
+        gap: 32px;
+    }
+    .ours .text{
+        padding:  2rem;
+        border: var(--main-color)  solid 3px ;
+        border-radius: 10px;
+    }
+    .ours img{
+        width: 500px;
+    }
+    .ours .text p{
+        width:420px ;
+        color: #585858;
+        padding: 10px 0;
+        line-height: 30px;
+        font-size: 20px;
+    }
+    .ours h2{
+        font-size: 50px;
+        color: #000;
+        padding: 0 0 20px;
+        font-weight: 400;
+    }
+    .wwd{
+        background: rgb(253, 249, 242);
+        margin: 150px 0 0;
+    }
+    .wwd h2{
+        font-size: 70px;
+        text-align: center;
+        padding: 50px 0 30px;
+        font-weight: 400;
+    }
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .main .text{
+        display:flex ;
+        gap: 10px;
+        margin: 20px;
+        width: 30%;
+        padding:  2rem;
+        border: var(--main-color)  solid 3px ;
+        border-radius: 10px;
+    }
+    .main h3{
+        font-size: 20px;
+        margin: 0 0 15px ;
+        
+    }
+    .main p{
+        color: #585858;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .main i{
+        font-size: 35px;
+        color: green;
+        margin: 0 10px;
+    }
+    .ourt h2{
+        text-align: center;
+        font-size: 70px;
+        font-weight: 400
+    }
+    .container{
+        width: 84%;
+        border-radius: 10px;
+    }
+    .card-list .card-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        user-select: none;
+        padding: 20px 0;
+        border-radius: 8px;
+        border: 1px solid green ;
+        color: green;
+        background: rgb(255, 255, 255 , 0.2);
+    }
+    .card-list .card-item img{
+        width: 150px;
+        height: 150;
+        border-radius: 50%;
+        margin-bottom:40px;
+        border: 3px solid green;
+        padding: 4px;
+        backdrop-filter: blur(30px);
+    }
+    .slider-wrapper{
+        overflow: hidden;
+        max-width: 1200px;
+        margin: 50px 100px;
+    }
+    .slider-wrapper .swiper-pagination-bullet{
+        background: green;
+        height: 15px;
+        width: 15px;
+    }
+    .slider-wrapper .swiper-button-prev{
+        color: green;
+        margin-top:-50px;
+        transition: 0.2s;
+    }
+    .slider-wrapper .swiper-button-prev:hover{
+        color:#000;
+    }
+    span{
+        font-size: 5px;
     }
 }
-
 
 
 /*---------------------------------------------------------------------------------------*/

@@ -1904,8 +1904,7 @@ color: var(--main-color);
                     text-transform: capitalize;
                     padding: 10px 0;
                     cursor: pointer;
-                    &:hover{
-                    }
+                    
                 }
             }
         }

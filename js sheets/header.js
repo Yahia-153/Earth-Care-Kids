@@ -2,20 +2,20 @@ var header = `
             <header id="header">
                 <nav id="nav">
                     <ul>
-                        <li><button onclick="window.location='index.html'"> HOME</button></li>
-                        <li><button onclick="window.location='about.html'"> ABOUT</button></li>
-                        <li><button onclick="window.location='videos.html'"> VIDEOS</button>
-                        <li><button onclick="window.location='sort game.html'"> Games</button>
-                        <li><button onclick="window.location='blogs.html'"> BLOGS</button>
-                        <li><button onclick="window.location='contact.html'"> CONTACT</button></li>
-                        <li><button onclick="window.location='gallery.html'"> gallery</button></li>
+                        <li><button onclick="window.location='index'"> HOME</button></li>
+                        <li><button onclick="window.location='about'"> ABOUT</button></li>
+                        <li><button onclick="window.location='videos'"> VIDEOS</button>
+                        <li><button onclick="window.location='sort game'"> Games</button>
+                        <li><button onclick="window.location='blogs'"> BLOGS</button>
+                        <li><button onclick="window.location='contact'"> CONTACT</button></li>
+                        <li><button onclick="window.location='gallery'"> gallery</button></li>
 
                     </ul>
 
                 </nav>
                 <div class="main">
                     <div class="lang">
-                        <button onclick="window.location='ar/index.html'">
+                        <button onclick="window.location='ar/index'">
                             <ion-icon name="language-outline"></ion-icon>
                         </button>
                     </div>
@@ -50,13 +50,13 @@ var header = `
                     <div id="links">
                         <div class="webLinks">
                             <ul>
-                                <li><button onclick="window.location='index.html'"> home</button></li>
-                                <li><button onclick="window.location='about.html'"> about</button></li>
-                                <li><button onclick="window.location='videos.html'"> videos</button>
-                                <li><button onclick="window.location='sort game.html'"> games</button>
-                                <li><button onclick="window.location='blogs.html'"> blogs</button>
-                                <li><button onclick="window.location='contact.html'"> contact</button></li>
-                                <li><button onclick="window.location='gallery.html'"> gallery</button></li>
+                                <li><button onclick="window.location='index'"> home</button></li>
+                                <li><button onclick="window.location='about'"> about</button></li>
+                                <li><button onclick="window.location='videos'"> videos</button>
+                                <li><button onclick="window.location='sort game'"> games</button>
+                                <li><button onclick="window.location='blogs'"> blogs</button>
+                                <li><button onclick="window.location='contact'"> contact</button></li>
+                                <li><button onclick="window.location='gallery'"> gallery</button></li>
         
                             </ul>
                         </div>

@@ -1,16 +1,16 @@
 var footer = `
     <footer>
     <div class="logo">
-        <img src="logo w.png" alt="">
+        <img src="../imgs/logo w.png" alt="">
     </div>
     <div class="links2">
         <ul>
-            <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> HOME</button></li>
-            <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> ABOUT US</button></li>
-            <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> VIDEOS</button></li>
-            <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> PLAY WITH ME</button>
-            <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> BLOGS</button>
-            <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon> CONTACT US</button></li>
+            <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> الصفحة الرئيسية</button></li>
+            <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> عنّا</button></li>
+            <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> الفيديوهات</button></li>
+            <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> الالعاب</button>
+            <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> المقالات</button>
+            <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon> تواصل معنا </button></li>
         </ul>
         
     </div>

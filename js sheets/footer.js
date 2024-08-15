@@ -5,12 +5,12 @@ var footer = `
     </div>
     <div class="links2">
         <ul>
-            <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> HOME</button></li>
-            <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> ABOUT US</button></li>
-            <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> VIDEOS</button></li>
-            <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> PLAY WITH ME</button>
-            <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> BLOGS</button>
-            <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon> CONTACT US</button></li>
+            <li><button onclick="window.location='index'"><ion-icon name="home"></ion-icon> HOME</button></li>
+            <li><button onclick="window.location='about'"><ion-icon name="person"></ion-icon> ABOUT US</button></li>
+            <li><button onclick="window.location='videos'"><ion-icon name="play-circle"></ion-icon> VIDEOS</button></li>
+            <li><button onclick="window.location='sort game'"><ion-icon name="game-controller"></ion-icon> PLAY WITH ME</button>
+            <li><button onclick="window.location='blogs'"><ion-icon name="newspaper"></ion-icon> BLOGS</button>
+            <li><button onclick="window.location='contact'"><ion-icon name="call"></ion-icon> CONTACT US</button></li>
         </ul>
         
     </div>

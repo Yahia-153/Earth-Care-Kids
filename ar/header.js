@@ -2,20 +2,20 @@ var header = `
     <header id="header">
                 <nav id="nav">
                     <ul>
-                        <li><button onclick="window.location='index.html'"> الصفحة الرئيسية</button></li>
-                        <li><button onclick="window.location='about.html'"> عنّا</button></li>
-                        <li><button onclick="window.location='videos.html'"> الفيديوهات</button>
-                        <li><button onclick="window.location='sort game.html'"> الالعاب</button>
-                        <li><button onclick="window.location='blogs.html'"> المقالات</button>
-                        <li><button onclick="window.location='contact.html'"> تواصل معنا</button></li>
-                        <li><button onclick="window.location='gallery.html'"> معرض الصور</button></li>
+                        <li><button onclick="window.location='index'"> الصفحة الرئيسية</button></li>
+                        <li><button onclick="window.location='about'"> عنّا</button></li>
+                        <li><button onclick="window.location='videos'"> الفيديوهات</button>
+                        <li><button onclick="window.location='sort game'"> الالعاب</button>
+                        <li><button onclick="window.location='blogs'"> المقالات</button>
+                        <li><button onclick="window.location='contact'"> تواصل معنا</button></li>
+                        <li><button onclick="window.location='gallery'"> معرض الصور</button></li>
 
                     </ul>
 
                 </nav>
                 <div class="main">
                     <div class="lang">
-                        <button onclick="window.location='../index.html'">
+                        <button onclick="window.location='../index'">
                             <ion-icon name="language-outline"></ion-icon>
                         </button>
                     </div>
@@ -50,13 +50,13 @@ var header = `
                     <div id="links">
                         <div class="webLinks">
                             <ul>
-                                <li><button onclick="window.location='index.html'"> الصفحة الرئيسية</button></li>
-                                <li><button onclick="window.location='about.html'"> عنّا</button></li>
-                                <li><button onclick="window.location='videos.html'"> الفيديوهات</button>
-                                <li><button onclick="window.location='sort game.html'"> الالعاب</button>
-                                <li><button onclick="window.location='blogs.html'"> المقالات</button>
-                                <li><button onclick="window.location='contact.html'"> تواصل معنا</button></li>
-                                <li><button onclick="window.location='gallery.html'"> معرض الصور</button></li>
+                                <li><button onclick="window.location='index'"> الصفحة الرئيسية</button></li>
+                                <li><button onclick="window.location='about'"> عنّا</button></li>
+                                <li><button onclick="window.location='videos'"> الفيديوهات</button>
+                                <li><button onclick="window.location='sort game'"> الالعاب</button>
+                                <li><button onclick="window.location='blogs'"> المقالات</button>
+                                <li><button onclick="window.location='contact'"> تواصل معنا</button></li>
+                                <li><button onclick="window.location='gallery'"> معرض الصور</button></li>
         
                             </ul>
                         </div>

@@ -1058,6 +1058,16 @@ footer{
     .slider-wrapper .swiper-button-prev:hover{
         filter: drop-shadow(3px 0px 0px #000);
     }
+    .card-list .card-item .links{
+        display: flex;
+    }
+    .card-list .card-item .links i{
+        color: var(--main-color);
+        font-size: 25px;
+        border-radius: 50%;
+        margin: 3px;
+        
+    }
     span{
         font-size: 10px;
         margin: 0 10px;

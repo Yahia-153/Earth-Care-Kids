@@ -4,7 +4,7 @@ var header = `
                     <ul>
                         <li><button onclick="window.location='index'"> HOME</button></li>
                         <li><button onclick="window.location='about'"> ABOUT</button></li>
-                        <li><button onclick="window.location='videos'"> VIDEOS</button>
+                        <li><button onclick="window.location='video'"> VIDEOS</button>
                         <li><button onclick="window.location='sort game'"> Games</button>
                         <li><button onclick="window.location='blogs'"> BLOGS</button>
                         <li><button onclick="window.location='contact'"> CONTACT</button></li>
@@ -52,7 +52,7 @@ var header = `
                             <ul>
                                 <li><button onclick="window.location='index'"> home</button></li>
                                 <li><button onclick="window.location='about'"> about</button></li>
-                                <li><button onclick="window.location='videos'"> videos</button>
+                                <li><button onclick="window.location='video'"> videos</button>
                                 <li><button onclick="window.location='sort game'"> games</button>
                                 <li><button onclick="window.location='blogs'"> blogs</button>
                                 <li><button onclick="window.location='contact'"> contact</button></li>

@@ -25,6 +25,16 @@ body {
     font-family: sans-serif;
     color: var(--main-color);
 }
+body::-webkit-scrollbar {
+    width: .4rem;
+    border-radius: .4rem;
+    background-color: var(--bg-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: .4rem;
+    background-color: var(--main-color);
+}
 #header{
     background: url(/imgs/header\ bg\ g.jpg);
     background-position: center center;
@@ -319,12 +329,16 @@ body {
 @media screen and (max-width: 990px) {
     .container {
         grid-template-columns: 1fr;
+        .main-video{
+            height: auto;
+        }
     }
 }
 
 .main-video, .video-playlist {
     width: 100%;
-    height: 30rem;
+    height: 35rem;
+    margin-bottom: 50px;
 }
 
 .main-video .title {
@@ -348,21 +362,20 @@ body {
 .video-playlist .videos::-webkit-scrollbar {
     width: .4rem;
     border-radius: .4rem;
-    background-color: #0005;
+    background-color: var(--bg-color);
 }
 
 .video-playlist .videos::-webkit-scrollbar-thumb {
     border-radius: .4rem;
-    background-color: var(--bg-color);
+    background-color: var(--main-color);
 }
 
 .video-playlist .videos .video {
     position: relative;
-    width: 100%;
     height: 4rem;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     padding: 0 1rem;
@@ -403,11 +416,14 @@ body {
 
 
 .video p {
-   margin-left: 2.5rem;
+    text-align: end;
+}
+.video .ol{
+ visibility: hidden;
 }
 
 .video h3 {
-    width: 23rem;
+    width: auto;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -415,6 +431,7 @@ body {
     font: 100 1rem sans-serif;
     padding: 0 .5rem;
 }
+/* ------------------------------------------------ */
 footer{
     position: relative;
     background: var(--main-color);
@@ -523,6 +540,207 @@ footer{
         ion-icon{
             font-size: 25px;
             font-weight: bold;
+        }
+    }
+}
+@media screen and (max-width: 1105px){
+    .m-page{
+        .hi{
+            margin: 50px 0px;
+        }
+    }
+    .blog{
+        #article{
+            .main.on{
+                --translate-value:-300px;
+            }
+
+        }
+    }
+}
+@media screen and (max-width: 915px){
+    #header{
+        nav{
+            display: none;
+        }
+        .main .logo img{
+            width: 100%;
+        }
+    }
+
+}
+@media screen and (max-width: 750px){
+    .blog{
+        #article{
+            .main{
+                .model3D{
+                    --TV-border:20px;
+                }
+                .head{
+                    .h{
+                        h1{
+                            font-size: 30px;
+                        }
+                        p{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .main.on{
+                --translate-value:-200px;
+            }
+
+        }
+        #main{
+            .h{
+                h1{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .login-body{
+        .container {
+            width: 100%;
+            margin: 10px;
+            padding: 15px;
+        }
+    }
+    .m-page{
+
+        .hi{
+            .head{
+                font-size: 2rem;
+            }
+            p{
+            font-size: 17px;
+            }
+        }
+        .img {
+            position: relative;
+            width:  50%;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 50%;
+            }
+        }
+    }
+    .m-page .img {
+        width: 100%;
+    }
+    .services{
+        
+        margin-top: 75px ;
+        .container{
+            .div{
+                
+                .massage{
+                    border-radius: 2rem;
+                    .text{
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+                    .p-btn{
+                        button{
+                            margin: 2.5px 10px;
+                                ion-icon{
+                                font-size: 9px;
+                                margin: 5px;
+                                }
+                        }
+                    }
+                    .btn-class-name{
+                        width: 30px;
+                        height:  30px;
+                    }
+                }
+            }
+        }
+    }
+    .about-body{
+        .ours .text{
+            min-width: 0;
+        }
+        .aecc h2{
+            font-size: 40px;
+            margin: 10px auto;
+            width: 100%;
+        }
+        .aecc p{
+            font-size: 18px;
+            margin: 10px auto;
+            line-height: 25px;
+        }
+        .ours .text p{
+            padding: 5px 0;
+            line-height: 26px;
+            font-size: 18px;
+        }
+        .ours h2{
+            font-size: 40px;
+            color: #000;
+            padding: 0 0 10px;
+        }
+        .ourt h2{
+            font-size: 50px;
+        }
+        .wwd h2{
+            font-size: 50px;
+            padding: 25px 0 15px;
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    .blog{
+        #main{
+            .h{
+                h1{
+                    font-size: 32px;
+                }
+                p{
+                    display: none;
+                }
+            }
+        }
+        #article{
+            .main{
+                h1{
+                    font-size: 30px;
+                }
+                .p1{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .blog{
+        #main{
+            .h{
+                h1{
+                    font-size: 30px;
+                }
+            }
+        }
+        #article{
+            .main{
+                h1{
+                    font-size: 22px;
+                    margin: 20px 25px;
+                }
+                
+            }
+            .main.on{
+                --translate-value:-100px;
+            }
         }
     }
 }

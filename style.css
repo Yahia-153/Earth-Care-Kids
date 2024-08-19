@@ -91,8 +91,7 @@ body {
                 }
                 button{
                     text-transform: uppercase;
-/*                     font-size: clamp(10px , 10% , 40px);
- */                    font-size: 100%;
+                    font-size: 100%;
                     color: var(--bg-color);
                     border: none;
                     background: transparent;
@@ -1877,14 +1876,24 @@ color: var(--main-color);
                 height: 100%;
                 min-height: 300px;
                 border-radius: 5px;
-                img{
-                    width: 100%;
+                position: relative;
+                overflow: hidden;
+                #body{
+                    z-index: 3;
+                    position: absolute;
+                    animation: swing 4s ease-in-out infinite;
+                    transform-origin: top center;
                 }
-                #Bubbles{
-                    position: relative;
+                #BACKGROUND{
+                    position: absolute;
+                    z-index: 1;
+                }
+                #bubbles{
+                    position: absolute;
                     display: block;
-                    height: 0;
-                    overflow: hidden;
+                    top: 100%;
+                    animation: bubbles 6s -1s ease-in-out infinite , shake 4s -1s ease-in-out infinite ;
+                    z-index: 2;
                 }
             }
         }
@@ -1921,6 +1930,40 @@ color: var(--main-color);
                 }
             }
         }
+    }
+}
+@keyframes bubbles {
+    
+    100%{
+        top: -100%;
+    }
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+@keyframes swing {
+    20% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-15deg);
+    }
+    60% {
+        transform: rotate(15deg);
+    }
+    80% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
 

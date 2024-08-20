@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="icon" type="image/png" sizes="32*32" href="ecology_10104684.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="main.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=VT323&display=swap" rel="stylesheet">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+        <title>login - sign up</title>
+      </head>
+<body class="login-body">
+   <div class="back" onclick="window.location='index.html'">
+      <ion-icon name="arrow-back"></ion-icon>
+    </div> 
+    <div class="wrapper">
+        <div class="card-switch">
+        <label class="switch">
+           <input type="checkbox" class="toggle">
+           <span class="slider"></span>
+           <span class="card-side"></span>
+           <div class="flip-card__inner">
+              <div class="flip-card__front">
+                 <div class="title">Log in</div>
+                 <div class="flip-card__form">
+                    <input class="flip-card__input" name="text" placeholder="Email or Username" type="text" id="username">
+                    <input class="flip-card__input" name="password" placeholder="Password" type="password" id="password" >
+                    <button class="flip-card__btn" onclick="login()">Let`s go!</button>
+                    <p id="loginResult"></p>
+                 </div>
+              </div>
+              <div class="flip-card__back">
+                 <div class="title">Sign up</div>
+                 <div class="flip-card__form">
+                    <input class="flip-card__input" placeholder="Firstname" type="Firstname">
+                    <input class="flip-card__input" placeholder="Lastname" type="Lastname">
+                    <input class="flip-card__input" name="email" placeholder="Email" type="email">
+                    <input class="flip-card__input" name="password" placeholder="Password" type="password">
+                    <select name="gender" class="flip-card__input select">
+                        <option value="select">select your gender</option>
+                        <option value="Boy">Boy</option>
+                        <option value="Girl">Girl</option>
+                     </select>
+                    <button class="flip-card__btn">Confirm!</button>                                           
+                 </div>
+              </div>
+           </div>
+        </label>
+    </div>   
+</div>
+
+<script>
+   // Sample user credentials
+   const users = [
+       { username: "user1", password: "pass1" },
+       { username: "user2", password: "password2" },
+       // Add more users as needed
+   ];
+
+   // Function to validate login
+   function login() {
+       const usernameInput = document.getElementById("username").value;
+       const passwordInput = document.getElementById("password").value;
+
+       for (let i = 0; i < users.length; i++) {
+           if (usernameInput === users[i].username) {
+               if (passwordInput === users[i].password) {
+                   document.getElementById("loginResult").innerText = "Login successful!";
+                   return;
+               } else {
+                   document.getElementById("loginResult").innerText = "Incorrect password. Please try again.";
+                   return;
+               }
+           }
+       }
+
+       // If username is not found
+       document.getElementById("loginResult").innerText = "Username not found. Please try again.";
+   }
+</script>
+</body>
+</html>

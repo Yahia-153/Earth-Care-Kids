@@ -1,50 +1,50 @@
  sound = new Audio('me.mp3');
- // A simple chatbot that responds with some predefined answers
- function chatbot(input) {
-    let output = "";
-    input = input.toLowerCase();
-    if (input.includes("your name")) {
+ function chatbot(inputV) {
+    inputV = inputV.toLowerCase()
+    if (inputV.includes("your name")) {
         sound = new Audio('me.mp3');
         sound.play();
-    } else if (input.includes("water pollution")) {
+    } else if (inputV.includes("plastic pollution")) {
        sound = new Audio('plastic pollution.mp3');
       sound.play()
-    } else if (input.includes("chemicals")) {
+    } else if (inputV.includes("chemical")) {
        sound = new Audio('chemicals pollution.mp3');
       sound.play()
     } else {
-      output = "Sorry, I don't understand that. Please try something else.";
+      sound = new Audio('sorry.mp3');
+      sound.play()
     }
-    return output;
   }
+  var input = document.getElementById("input");
+ var questionBtnOne =  document.querySelector('.question-One') ;
+ var questionBtnTwo =  document.querySelector('.question-Two') ;
+ var questionBtnThree =  document.querySelector('.question-Three') ;
+ questionBtnOne.addEventListener('click' , ()=>{
+  let question = document.querySelector('.question-One').innerText;
+  input.value = question ;
+  input.focus();
+ })
+ questionBtnTwo.addEventListener('click' , ()=>{
+  let question = document.querySelector('.question-Two').innerText;
+  input.value = question ;
+  input.focus();
+ })
+ questionBtnThree.addEventListener('click' , ()=>{
+  let question = document.querySelector('.question-Three').innerText;
+  input.value = question ;
+  input.focus();
+ })
 
-  // Display the user message on the chat
-  function displayUserMessage(message) {
-    let userMessage = message; /* important */ 
-  }
-
-  // Display the bot message on the chat
-  function displayBotMessage(message) {
-    let botMessage = message; /* important */  
-
-  }
-
-  // Send the user message and get the bot response
   function sendMessage() {
-    let input = document.getElementById("input").value;
-    if (input) {
-      displayUserMessage(input);
-      let output = chatbot(input);
-      setTimeout(function() {
-        displayBotMessage(output);
-      });
-      document.getElementById("input").value = "";
-    }
+    var inputV = document.getElementById("input").value;
+    chatbot(inputV)
+    document.getElementById("input").value = "";   
   }
+  document.getElementById("sendBtn").addEventListener("click", sendMessage );
+
   
 
-  // Add a click event listener to the button
-  document.getElementById("sendBtn").addEventListener("click", sendMessage );
+
 
 
 

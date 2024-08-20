@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32*32" href="../ecology_10104684.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="../main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=VT323&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Changa:wght@200..800&display=swap" rel="stylesheet">
+      <title>أعد تدويرها</title>
+</head>
+<body class="vid-body ar">
+    <div class="burger-div"  id="burgerDiv">
+        
+        <div class="links">
+            <ul>
+                <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> الصفحة الرئيسية</button></li>
+                <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> عنَا</button></li>
+                <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> فيديوهات</button></li>
+                <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> ألعب معي</button>
+                <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> مقالات</button>
+                <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon> تواصل معنا</button></li>
+            </ul>
+        </div>
+
+    </div>
+<label class="burger" for="burger">
+            
+            <input type="checkbox" id="burger" onclick="burger()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav id="nav">
+            <div class="space">
+                <div class="logo">
+                    <a href="index.html"><img src="../logo.png" alt="logo"  ></a>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> الصفحة الرئيسية</button></li>
+                        <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> عنَا</button></li>
+                        <li><button><ion-icon name="leaf"></ion-icon> أعد التدوير <span><ion-icon name="chevron-forward-outline" class="arrow"></ion-icon></span></button>
+                            <div class="recycle">
+                                <ul>
+                                    <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> فيديوهات</button>
+                                    <hr>
+                                    <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> ألعب معي</button>
+                                        <hr>
+                                    <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> مقالات</button>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon> تواصل معنا</button></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class="lor">
+        <div>
+            <h3>حدد فئة مقاطع الفيديو:</h3>
+            <button onclick="document.getElementById('recycle').style.display='none'; document.getElementById('learn').style.display='block';">
+                فيديوهات تعليمية
+            </button>
+            <button onclick="document.getElementById('recycle').style.display='block'; document.getElementById('learn').style.display='none';">
+                فيديوهات عن إعادة التدوير
+            </button>
+        </div>
+    </div>
+    <!-- Video Section -->
+    <section class="videos" id="recycle">
+        <header>
+            <h4>دعونا نتعلم كيفية إعادة التدوير!<br/>شاهد الفيديو أدناه:</h4>
+        </header>
+        <div class="select">
+        <div class="lable">
+            <h5>اختر الفئة :</h5>
+        </div>
+        <div class="catigories">
+            <div class="catigory">
+                <select name="catigories" id="filter" onchange="select()">
+                    <option value="all">الكل</option>
+                    <option value="plastic">البلاستيك</option>
+                    <option value="paper">الورق</option>
+                    <option value="carton">الورق المقوى</option>
+                </select>
+            </div>
+            
+            
+        </div>
+    </div>
+        <div class="body" id="vids">
+            <div class="video carton" name="video">
+                <iframe  src="https://www.youtube.com/embed/oRg7eeivC4k?si=OUmeDOF_Z0JDu-Qn"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content carton">
+                    <p>كيفية صنع بنك للعملات المعدنية من الورق المقوى القديم</p>
+                    <ul>
+                        <h4>الأدوات والمواد</h4>
+                        <li>ورق مقوى</li>
+                        <li>مسدس الغراء الساخن</li>
+                        <li>سكين القاطع</li>
+                        <li>العصي الغراء</li>
+
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="video carton" name="video">
+                <iframe  src="https://www.youtube.com/embed/M3TOKTHYc3g?si=Nqy68oF4QDNO7CdW"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content carton">
+                    <p>أفضل مزبلة صغيرة مصنوعة من كوب ورقي</p>
+                    <ul>
+                        <h4>الأدوات والمواد</h4>
+                        <li>اكواب ورقية</li>
+                        <li>عصا خشبية</li>
+                        <li>مقص</li>
+                        <li>صمغ</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="video plastic" name="video">
+                <iframe  src="https://www.youtube.com/embed/B98DjzRKRo8?si=tfzdbLTNN7w3vwoT"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content plastic">
+                    <p>كيفية صنع سلة المهملات من زجاجة بلاستيكية</p>
+                    <ul>
+                        <h4>الأدوات والمواد</h4>
+                        <li>زجاجة بلاستيكية</li>
+                        <li>ورق ملون</li>
+                        <li>ورق مقوى</li>
+                        <li>عصا خشبية</li>
+                        <li>مقص</li>
+                        <li>مسدس الغراء الساخن</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video plastic" name="video">
+                <iframe  src="https://www.youtube.com/embed/7Bh55iHNYEI?si=rX8h8OVRkGAy5OAu"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content plastic">
+                    <p>كيفية صنع حامل قلم رصاص</p>
+                    <ul>
+                        <h4>الأدوات والمواد</h4>
+                        <li>زجاجة بلاستيكية</li>
+                        <li>ورق ملون</li>
+                        <li>مقص</li>
+                        <li>صمغ</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="video plastic" name="video">
+                <iframe  src="https://www.youtube.com/embed/MMxn5Vh1hHo?si=XhWcH9GMJ2rzDcdd"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content plastic">
+                    <p>كيفية صنع علبة أقلام جميلة من زجاجة ماء</p>
+                    <ul>
+                        <h4>الأدوات والمواد</h4>
+                        <li>زجاجة بلاستيكية</li>
+                        <li>ورق ملون</li>
+                        <li>مقص</li>
+                        <li>صمغ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video paper" name="video">
+                <iframe  src="https://www.youtube.com/embed/GC7xMulhq7c?si=JJj91nThW2KploAM"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content paper">
+                    <p>كيفية عمل منظم لسطح المكتب باستخدام الورق</p>
+                    <ul>
+                        <h4>الأدوات والمواد</h4>
+                        <li>اوراق قديمة</li>
+                        <li>الوان</li>
+                        <li>مقص</li>
+                        <li>صمغ</li>
+                        <li>عصى غراء</li>
+                        <li>ورق مقوى</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="video paper" name="video">
+                <iframe  src="https://www.youtube.com/embed/x76VGDzbCmM?si=oHztUJS1j__I8d0L"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;  picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content paper">
+                    <p>كيفية صنع حامل مفاتيح باستخدام الورق</p>
+                    <ul>
+                        <h4>الأدوات والمواد</h4>
+                        <li>اوراق قديمة</li>
+                        <li>الوان</li>
+                        <li>مقص</li>
+                        <li>صمغ</li>
+                        <li>عصى غراء</li>
+                        <li>حبل</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </section>
+    <section class="videos" id="learn">
+        <div class="body" id="vids">
+            <div class="video">
+                <iframe  src="https://www.youtube.com/embed/OasbYWF4_S8?si=evWmsRLRGvGJrqPv&amp;start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="content">
+                    <p>التقليل وإعادة الاستخدام وإعادة التدوير للاستمتاع بحياة أفضل</p>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/t7Q7y_xjR5E?si=7bJKTNZ1i5mPruB6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                 
+                <div class="content">
+                     <p>تلوث الهواء</p>
+                     <h6><a href="Factory Waste and Air Pollution.html">مقالة حول هذا الموضوع</a></h6>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/Om42Lppkd9w?si=BX03UIwBNhsmtZ48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                 
+                <div class="content">
+                     <p>تلوث المياه</p>
+                     <h6><a href="Water Pollution.html">مقالة حول هذا الموضوع</a></h6>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/tykLKCT7DyY?si=losgt0tO6De--cFt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                 
+                <div class="content">
+                     <p>تغير المناخ</p>
+                     <h6><a href="climate change.html">مقالة حول هذا الموضوع</a></h6>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
+    <script>
+        AOS.init();
+      </script>
+      
+<script>
+    // JavaScript code
+    document.getElementById('filter').addEventListener('change', function() {
+      const filterValue = this.value;
+      const items = document.querySelectorAll('#vids div');
+  
+      items.forEach(item => {
+        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+    
+  </script>
+  
+</body>
+<footer>
+    <div class="logo">
+        <img src="../logo w.png" alt="">
+    </div>
+    <div class="links2">
+        <ul>
+            <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> الصفحة الرئيسية</button></li>
+            <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon>عنَا</button></li>
+            <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> فيديوهات</button></li>
+            <li><button ><ion-icon name="game-controller"></ion-icon> إلعب معي</button>
+            <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> مقالات</button>
+            <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon>تواصل معنا</button></li>
+        </ul>
+        
+    </div>
+    <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556130872330" target="_blank" rel="noopener noreferrer"><button class="f" ><ion-icon name="logo-facebook"></ion-icon></button></a>
+        <a href="https://www.instagram.com/earthcarekids1?igsh=MXd2NWJ6cmUxdzlkeg==" target="_blank" rel="noopener noreferrer"><button class="i"><ion-icon name="logo-instagram"></ion-icon></button></a>
+        <a href="https://www.youtube.com/@EARTHCAREKIDS" target="_blank" rel="noopener noreferrer"><button class="y"><ion-icon name="logo-youtube"></ion-icon></button></a>
+        <a href="https://twitter.com/earth_care_kids" target="_blank" rel="noopener noreferrer"><button class="t"><ion-icon name="logo-twitter"></ion-icon></button></a>
+    </div>
+    <div class="lan">
+        <a href="../videos.html"><ion-icon name="language"></ion-icon></a>
+    </div>
+  </footer>
+</html>

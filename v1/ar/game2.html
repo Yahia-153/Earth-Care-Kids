@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32*32" href="ecology_10104684.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=VT323&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Game 2</title>
+</head>
+<body class="game2body">
+    <div class="content">
+        <h3 > Score : <span id="score">0</span></h3>
+        <div class="quiz" id="quiz1">
+            <p>quiz 1</p>
+            <div class="ask">
+                <h4>What should you do with an empty plastic water bottle when you're finished with it?</h4>
+            </div>
+            <div class="answer">
+                <ul>
+                    <li><button onclick="WA()">Throw it in the trash</button></li>
+                    <li><button onclick="RA()">Recycle it</button></li>
+                    <li><button onclick="WA()">Leave it on the ground</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="quiz" id="quiz2">
+            <p>quiz 2</p>
+            <div class="ask">
+                <h4>Which of the following is a way to reduce air pollution?</h4>
+            </div>
+            <div class="answer">
+                <ul>
+                    <li><button onclick="RA()"> Riding a bike or walking instead of driving a car</button></li>
+                    <li><button onclick="WA()">Burning trash in the backyard</button></li>
+                    <li><button onclick="WA()"> Using a lot of aerosol sprays</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="quiz" id="quiz3">
+            <p>quiz 3</p>
+            <div class="ask">
+                <h4>What happens when we litter plastic bags?</h4>
+            </div>
+            <div class="answer">
+                <ul>
+                    <li><button onclick="WA()">They disappear magically</button></li>
+                    <li><button onclick="RA()">They can harm animals and pollute the environment</button></li>
+                    <li><button onclick="WA()">They disappear magically</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="quiz" id="quiz4">
+            <p>end</p>
+            
+        </div>
+        
+    </div>
+    <script>
+        var nqn =1;
+        var score= 0;
+        console.log(nqn);
+        function RA(){
+            nqn++;
+            score++;
+            console.log(nqn , score);
+            next()
+        }
+        function WA(){
+            nqn++;
+            console.log(nqn , score);
+            next()
+        }
+        function next(){
+            var tq = (nqn*1) - 1;
+            document.getElementById("quiz"+tq).style.display='none';
+            document.getElementById("quiz"+nqn).style.display='block';
+            document.getElementById("score").innerHTML = score ;
+            
+    }
+    </script>
+</body>
+<footer>
+    <div class="logo">
+        <img src="logo w.png" alt="">
+    </div>
+    <div class="links2">
+        <ul>
+            <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> HOME</button></li>
+            <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> ABOUT US</button></li>
+            <li><button onclick="window.location='videos.html'"><ion-icon name="pencil"></ion-icon> VIDEOS</button></li>
+            <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> PLAY WITH ME</button>
+            <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> BLOGS</button>
+            <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon> CONTACT US</button></li>
+        </ul>
+        
+    </div>
+    <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=61556130872330" target="_blank" rel="noopener noreferrer"><button class="f" ><ion-icon name="logo-facebook"></ion-icon></button></a>
+        
+        <a href="https://www.instagram.com/earthcarekids1?igsh=MXd2NWJ6cmUxdzlkeg==" target="_blank" rel="noopener noreferrer"><button class="i"><ion-icon name="logo-instagram"></ion-icon></button></a>
+        <a href="https://www.youtube.com/@EARTHCAREKIDS" target="_blank" rel="noopener noreferrer"><button class="y"><ion-icon name="logo-youtube"></ion-icon></button></a>
+        <a href="https://twitter.com/earth_care_kids" target="_blank" rel="noopener noreferrer"><button class="t"><ion-icon name="logo-twitter"></ion-icon></button></a>
+    </div>
+</footer>
+</html>

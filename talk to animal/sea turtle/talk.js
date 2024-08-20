@@ -22,17 +22,14 @@
  questionBtnOne.addEventListener('click' , ()=>{
   let question = document.querySelector('.question-One').innerText;
   input.value = question ;
-  input.focus();
  })
  questionBtnTwo.addEventListener('click' , ()=>{
   let question = document.querySelector('.question-Two').innerText;
   input.value = question ;
-  input.focus();
  })
  questionBtnThree.addEventListener('click' , ()=>{
   let question = document.querySelector('.question-Three').innerText;
   input.value = question ;
-  input.focus();
  })
 
   function sendMessage() {

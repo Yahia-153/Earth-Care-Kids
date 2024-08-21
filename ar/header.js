@@ -8,7 +8,7 @@ var header = `
                         <li><button onclick="window.location='sort game'"> الالعاب</button>
                         <li><button onclick="window.location='blogs'"> المقالات</button>
                         <li><button onclick="window.location='contact'"> تواصل معنا</button></li>
-                        <li><button onclick="window.location='gallery'"> معرض الصور</button></li>
+                        <li><button onclick="window.location='talk to animals'"> تحدث مع الحيوانات </button></li>
 
                     </ul>
 
@@ -56,7 +56,7 @@ var header = `
                                 <li><button onclick="window.location='sort game'"> الالعاب</button>
                                 <li><button onclick="window.location='blogs'"> المقالات</button>
                                 <li><button onclick="window.location='contact'"> تواصل معنا</button></li>
-                                <li><button onclick="window.location='gallery'"> معرض الصور</button></li>
+                                <li><button onclick="window.location='talk to animals'"> تحدث مع الحيوانات </button></li>
         
                             </ul>
                         </div>

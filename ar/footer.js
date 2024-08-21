@@ -22,9 +22,6 @@ var footer = `
         <a href="https://www.youtube.com/@EARTHCAREKIDS" target="_blank" rel="noopener noreferrer"><button class="y"><ion-icon name="logo-youtube"></ion-icon></button></a>
         <a href="https://twitter.com/earth_care_kids" target="_blank" rel="noopener noreferrer"><button class="t"><ion-icon name="logo-twitter"></ion-icon></button></a>
     </div>
-    <div class="lan">
-        <a href="ar/index"><ion-icon name="language"></ion-icon></a>
-    </div>
 </footer>
 `
 document.getElementById("footer-container").innerHTML= footer ;

@@ -8,7 +8,7 @@ var header = `
                         <li><button onclick="window.location='sort game'"> Games</button>
                         <li><button onclick="window.location='blogs'"> BLOGS</button>
                         <li><button onclick="window.location='contact'"> CONTACT</button></li>
-                        <li><button onclick="window.location='gallery'"> gallery</button></li>
+                        <li><button onclick="window.location='talk to animals'"> talk to animals</button></li>
 
                     </ul>
 
@@ -56,7 +56,7 @@ var header = `
                                 <li><button onclick="window.location='sort game'"> games</button>
                                 <li><button onclick="window.location='blogs'"> blogs</button>
                                 <li><button onclick="window.location='contact'"> contact</button></li>
-                                <li><button onclick="window.location='gallery'"> gallery</button></li>
+                                <li><button onclick="window.location='talk to animals'"> talk to animals</button></li>
         
                             </ul>
                         </div>

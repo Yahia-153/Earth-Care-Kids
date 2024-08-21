@@ -11,6 +11,8 @@ var footer = `
             <li><button onclick="window.location='sort game'"><ion-icon name="game-controller"></ion-icon> PLAY WITH ME</button>
             <li><button onclick="window.location='blogs'"><ion-icon name="newspaper"></ion-icon> BLOGS</button>
             <li><button onclick="window.location='contact'"><ion-icon name="call"></ion-icon> CONTACT US</button></li>
+            <li><button onclick="window.location='talk to animals'"><ion-icon name="chatbubbles"></ion-icon> talk to animals</button></li>
+
         </ul>
         
     </div>

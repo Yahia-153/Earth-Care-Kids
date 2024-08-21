@@ -1,7 +1,7 @@
 var footer = `
     <footer>
     <div class="logo">
-        <img src="../imgs/logo w.png" alt="">
+        <img src="../imgs/logo w.png" />
     </div>
     <div class="links2">
         <ul>
@@ -11,6 +11,7 @@ var footer = `
             <li><button onclick="window.location='sort game'"><ion-icon name="game-controller"></ion-icon> الالعاب</button>
             <li><button onclick="window.location='blogs'"><ion-icon name="newspaper"></ion-icon> المقالات</button>
             <li><button onclick="window.location='contact'"><ion-icon name="call"></ion-icon> تواصل معنا </button></li>
+            <li><button onclick="window.location='talk to animals'"><ion-icon name="chatbubbles"></ion-icon> تحدث مع الحيوانات </button></li>
         </ul>
         
     </div>

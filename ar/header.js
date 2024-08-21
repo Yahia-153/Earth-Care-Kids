@@ -4,7 +4,7 @@ var header = `
                     <ul>
                         <li><button onclick="window.location='index'"> الصفحة الرئيسية</button></li>
                         <li><button onclick="window.location='about'"> عنّا</button></li>
-                        <li><button onclick="window.location='videos'"> الفيديوهات</button>
+                        <li><button onclick="window.location='video'"> الفيديوهات</button>
                         <li><button onclick="window.location='sort game'"> الالعاب</button>
                         <li><button onclick="window.location='blogs'"> المقالات</button>
                         <li><button onclick="window.location='contact'"> تواصل معنا</button></li>
@@ -41,7 +41,7 @@ var header = `
                 </div>
             </nav>
             <div id="menuBG" onclick="hideMenu()"></div>
-            <aside id="menu">
+            <aside id="menu" >
                 <button id="menuIcon" onclick="hideMenu()">
                     <ion-icon name="close-outline"></ion-icon>
                 </button>
@@ -52,7 +52,7 @@ var header = `
                             <ul>
                                 <li><button onclick="window.location='index'"> الصفحة الرئيسية</button></li>
                                 <li><button onclick="window.location='about'"> عنّا</button></li>
-                                <li><button onclick="window.location='videos'"> الفيديوهات</button>
+                                <li><button onclick="window.location='video'"> الفيديوهات</button>
                                 <li><button onclick="window.location='sort game'"> الالعاب</button>
                                 <li><button onclick="window.location='blogs'"> المقالات</button>
                                 <li><button onclick="window.location='contact'"> تواصل معنا</button></li>

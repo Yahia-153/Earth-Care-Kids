@@ -18,29 +18,89 @@
     <title>CONTACT US</title>
 </head>
 <body class="contact-body">
-     
-    <div class="container">
-             <div class="robot" data-aos="slide-up" >
-                    <img src="Robots design/robot/1x/contact.png" alt="">
-                </div>
-            <div class="form-container">
-               
-                <form class="form">
-                  <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input required="" name="email" id="email" type="text">
-                  </div>
-                  <div class="form-group">
-                    <label for="textarea">Massage</label>
-                    <textarea required="" cols="50" rows="10" id="textarea" name="textarea">          </textarea>
-                  </div>
-                  <button type="submit" class="form-submit-btn">Send</button>
-                </form>
+     <div id="header-container">
+      <script src="js sheets/header.js"></script>
+     </div>
+     <div class="container">
+      <div class="main">
+        <div class="contact">
+          <h2>Contact us</h2>
+          <div class="text">
+            <p><ion-icon name="location-outline"></ion-icon> Egypt</p>
+            <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:EarthCareKids.contact@gamil.com">EarthCareKids.contact@gamil.com</a></p>
+            <p><ion-icon name="logo-instagram"></ion-icon><a href="https://www.instagram.com/earth_care_kids4/" target="_blank">instagram</a></p>
+            <p><ion-icon name="logo-facebook"></ion-icon><a href="https://www.facebook.com/profile.php?id=61564929233329" target="_blank">fecebook</a></p>
+            <p><ion-icon name="logo-youtube"></ion-icon><a href="https://www.youtube.com/@EarthCareKids-4" target="_blank">youtube</a></p>
+            <p><ion-icon name="logo-twitter"></ion-icon><a href="https://x.com/care_kids4" target="_blank">X</a></p>
+          </div>
+        </div>
+         <div class="get">
+          <h2>Get in touch</h2>
+          <div class="inputs">
+            <form  method="POST" id="form">
+              <input type="hidden" name="from_name" value="New Massage From Earth-Care-Kids">
+              <input type="hidden" name="access_key" value="f2776bbc-796a-4f60-a028-63b6d0963ffb">
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+              <div class="name">
+                <input type="text" id="First Name" name="First Name" placeholder="First Name">
+                <input type="text" id="Last Name" name="Last Name" placeholder="Last Name">
               </div>
+              <input type="text" name="subject" id="subject" placeholder="subject">
+              <input type="email" name="email" id="email" placeholder="Email">
+              <textarea name="massage" id="massage" placeholder="Massage"></textarea>
+              <div id="result"></div>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+         </div>
+      </div>
+     </div>
+     <div id="footer-container">
+      <script src="js sheets/footer.js"></script>
+     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
     <script>
         AOS.init();
       </script>
+           <script>
+            const form = document.getElementById('form');
+            const result = document.getElementById('result');
             
-            </body>
+            form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              const formData = new FormData(form);
+              const object = Object.fromEntries(formData);
+              const json = JSON.stringify(object);
+              result.innerHTML = "Please wait..."
+            
+                fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                    .then(async (response) => {
+                        let json = await response.json();
+                        if (response.status == 200) {
+                            result.innerHTML = "massage submitted successfully";
+                        } else {
+                            console.log(response);
+                            result.innerHTML = json.message;
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        result.innerHTML = "Something went wrong!";
+                    })
+                    .then(function() {
+                        form.reset();
+                        setTimeout(() => {
+                            result.style.display = "none";
+                        }, 3000);
+                    });
+            });
+            </script> 
+  </body>
 </html>

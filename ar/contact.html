@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32*32" href="../ecology_10104684.png">
+    <link rel="icon" type="image/png" sizes="32*32" href="../imgs/ecology_10104684.png">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="../main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=VT323&display=swap" rel="stylesheet">
@@ -14,58 +13,100 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>تواصل معنا</title>
 </head>
-<body class="contact-body ar">
+<body class="contact-body ">
      
-    <div class="container">
-        
-             <div class="robot" data-aos="slide-up" >
-                    <img src="../Robots design/robot/1x/contact.png" alt="">
-                </div>
-            <div class="form-container">
+    <body class="contact-body">
+        <div id="header-container">
+         <script src="header.js"></script>
+        </div>
+        <div class="container">
+         <div class="main">
+           <div class="contact">
+             <div class="text">
+               <p><ion-icon name="location-outline"></ion-icon> مصر</p>
+               <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:EarthCareKids.contact@gamil.com">EarthCareKids.contact@gamil.com</a></p>
+               <p><ion-icon name="logo-instagram"></ion-icon><a href="https://www.instagram.com/earth_care_kids4/" target="_blank">instagram</a></p>
+               <p><ion-icon name="logo-facebook"></ion-icon><a href="https://www.facebook.com/profile.php?id=61564929233329" target="_blank">fecebook</a></p>
+               <p><ion-icon name="logo-youtube"></ion-icon><a href="https://www.youtube.com/@EarthCareKids-4" target="_blank">youtube</a></p>
+               <p><ion-icon name="logo-twitter"></ion-icon><a href="https://x.com/care_kids4" target="_blank">X</a></p>
+             </div>
+           </div>
+            <div class="get">
+             <h2>تواصل معنا</h2>
+             <div class="inputs">
+               <form  method="POST" id="form">
+                 <input type="hidden" name="from_name" value="New Massage From Earth-Care-Kids">
+                 <input type="hidden" name="access_key" value="f2776bbc-796a-4f60-a028-63b6d0963ffb">
+                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                 <div class="name">
+                   <input type="text" id="First Name" name="First Name" placeholder="الاسم الأول">
+                   <input type="text" id="Last Name" name="Last Name" placeholder="الاسم الأخير">
+                 </div>
+                 <input type="text" name="subject" id="subject" placeholder="الموضوع">
+                 <input type="email" name="email" id="email" placeholder="البريد الإلكتروني">
+                 <textarea name="massage" id="massage" placeholder=" الرسالة"></textarea>
+                 <div id="result"></div>
+                 <button type="submit">إرسال</button>
+               </form>
+             </div>
+            </div>
+         </div>
+        </div>
+        <div id="footer-container">
+         <script src="footer.js"></script>
+        </div>
+       <script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
+       <script>
+           AOS.init();
+         </script>
+              <script>
+               const form = document.getElementById('form');
+               const result = document.getElementById('result');
                
-                <form class="form">
-                  <div class="form-group">
-                    <label for="email">البريد الإلكتروني</label>
-                    <input required="" name="email" id="email" type="text">
-                  </div>
-                  <div class="form-group">
-                    <label for="textarea">الرسالة</label>
-                    <textarea required="" cols="50" rows="10" id="textarea" name="textarea">          </textarea>
-                  </div>
-                  <button type="submit" class="form-submit-btn">إرسال</button>
-                </form>
-              </div>
+               form.addEventListener('submit', function(e) {
+                 e.preventDefault();
+                 const formData = new FormData(form);
+                 const object = Object.fromEntries(formData);
+                 const json = JSON.stringify(object);
+                 result.innerHTML = "Please wait..."
+               
+                   fetch('https://api.web3forms.com/submit', {
+                           method: 'POST',
+                           headers: {
+                               'Content-Type': 'application/json',
+                               'Accept': 'application/json'
+                           },
+                           body: json
+                       })
+                       .then(async (response) => {
+                           let json = await response.json();
+                           if (response.status == 200) {
+                               result.innerHTML = "massage submitted successfully";
+                           } else {
+                               console.log(response);
+                               result.innerHTML = json.message;
+                           }
+                       })
+                       .catch(error => {
+                           console.log(error);
+                           result.innerHTML = "Something went wrong!";
+                       })
+                       .then(function() {
+                           form.reset();
+                           setTimeout(() => {
+                               result.style.display = "none";
+                           }, 3000);
+                       });
+               });
+               </script> 
+     </body>
     <script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
     <script>
         AOS.init();
       </script>
-            </body>
-            <footer>
-                <div class="logo">
-                    <img src="../logo w.png" alt="">
-                </div>
-                <div class="links2">
-                    <ul>
-                        <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> الصفحة الرئيسية</button></li>
-                        <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon>عنَا</button></li>
-                        <li><button onclick="window.location='videos.html'"><ion-icon name="play-circle"></ion-icon> فيديوهات</button></li>
-                        <li><button ><ion-icon name="game-controller"></ion-icon> إلعب معي</button>
-                        <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> مقالات</button>
-                        <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon>تواصل معنا</button></li>
-                    </ul>
-                    
-                </div>
-                <div class="social">
-                    <a href="https://www.facebook.com/profile.php?id=61556130872330" target="_blank" rel="noopener noreferrer"><button class="f" ><ion-icon name="logo-facebook"></ion-icon></button></a>
-                    <a href="https://www.instagram.com/earthcarekids1?igsh=MXd2NWJ6cmUxdzlkeg==" target="_blank" rel="noopener noreferrer"><button class="i"><ion-icon name="logo-instagram"></ion-icon></button></a>
-                    <a href="https://www.youtube.com/@EARTHCAREKIDS" target="_blank" rel="noopener noreferrer"><button class="y"><ion-icon name="logo-youtube"></ion-icon></button></a>
-                    <a href="https://twitter.com/earth_care_kids" target="_blank" rel="noopener noreferrer"><button class="t"><ion-icon name="logo-twitter"></ion-icon></button></a>
-                </div>
-                <div class="lan">
-                    <a href="../contact.html"><ion-icon name="language"></ion-icon></a>
-                </div>
-            </footer>
-            </html>
+</body>
+            
+</html>

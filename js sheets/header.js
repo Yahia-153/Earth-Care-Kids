@@ -2,20 +2,20 @@ var header = `
             <header id="header">
                 <nav id="nav">
                     <ul>
-                        <li><button onclick="window.location='index'"> HOME</button></li>
-                        <li><button onclick="window.location='about'"> ABOUT</button></li>
-                        <li><button onclick="window.location='video'"> VIDEOS</button>
-                        <li><button onclick="window.location='sort game'"> Games</button>
-                        <li><button onclick="window.location='blogs'"> BLOGS</button>
-                        <li><button onclick="window.location='contact'"> CONTACT</button></li>
-                        <li><button onclick="window.location='talk to animals'"> talk to animals</button></li>
+                        <li><button onclick="window.location='index.html'"> HOME</button></li>
+                        <li><button onclick="window.location='about.html'"> ABOUT</button></li>
+                        <li><button onclick="window.location='video.html'"> VIDEOS</button>
+                        <li><button onclick="window.location='sort game.html'"> Games</button>
+                        <li><button onclick="window.location='blogs.html'"> BLOGS</button>
+                        <li><button onclick="window.location='contact.html'"> CONTACT</button></li>
+                        <li><button onclick="window.location='talk to animals.html'"> talk to animals</button></li>
 
                     </ul>
 
                 </nav>
                 <div class="main">
                     <div class="lang">
-                        <button onclick="window.location='ar/index'">
+                        <button onclick="window.location='ar/index.html'">
                             <ion-icon name="language-outline"></ion-icon>
                         </button>
                     </div>
@@ -50,13 +50,13 @@ var header = `
                     <div id="links">
                         <div class="webLinks">
                             <ul>
-                                <li><button onclick="window.location='index'"><ion-icon name="home"></ion-icon> home</button></li>
-                                <li><button onclick="window.location='about'"><ion-icon name="person"></ion-icon> about</button></li>
-                                <li><button onclick="window.location='video'"><ion-icon name="play-circle"></ion-icon> videos</button>
-                                <li><button onclick="window.location='sort game'"><ion-icon name="game-controller"></ion-icon> games</button>
-                                <li><button onclick="window.location='blogs'"><ion-icon name="newspaper"></ion-icon>  blogs</button>
-                                <li><button onclick="window.location='contact'"><ion-icon name="call"></ion-icon> contact</button></li>
-                                <li><button onclick="window.location='talk to animals'"><ion-icon name="chatbubbles"></ion-icon> talk to animals</button></li>
+                                <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> home</button></li>
+                                <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> about</button></li>
+                                <li><button onclick="window.location='video'.html"><ion-icon name="play-circle"></ion-icon> videos</button>
+                                <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> games</button>
+                                <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon>  blogs</button>
+                                <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon> contact</button></li>
+                                <li><button onclick="window.location='talk to animals.html'"><ion-icon name="chatbubbles"></ion-icon> talk to animals</button></li>
         
                             </ul>
                         </div>

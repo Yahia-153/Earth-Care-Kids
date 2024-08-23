@@ -241,6 +241,7 @@ body {
         grid-template-rows: repeat(2 , 1fr);
         height: calc(100% - 40px);
         .logo{
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;

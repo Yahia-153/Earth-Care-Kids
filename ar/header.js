@@ -46,17 +46,17 @@ var header = `
                     <ion-icon name="close-outline"></ion-icon>
                 </button>
                 <div class="container">
-                    <div></div>
+                    <div class="logo"><img src="../imgs/chatbot icon.png" alt=""></div>
                     <div id="links">
                         <div class="webLinks">
                             <ul>
-                                <li><button onclick="window.location='index'"> الصفحة الرئيسية</button></li>
-                                <li><button onclick="window.location='about'"> عنّا</button></li>
-                                <li><button onclick="window.location='video'"> الفيديوهات</button>
-                                <li><button onclick="window.location='sort game'"> الالعاب</button>
-                                <li><button onclick="window.location='blogs'"> المقالات</button>
-                                <li><button onclick="window.location='contact'"> تواصل معنا</button></li>
-                                <li><button onclick="window.location='talk to animals'"> تحدث مع الحيوانات </button></li>
+                                <li><button onclick="window.location='index'"><ion-icon name="home"></ion-icon> الصفحة الرئيسية</button></li>
+                                <li><button onclick="window.location='about'"><ion-icon name="person"></ion-icon> عنّا</button></li>
+                                <li><button onclick="window.location='video'"><ion-icon name="play-circle"></ion-icon> الفيديوهات</button>
+                                <li><button onclick="window.location='sort game'"><ion-icon name="game-controller"></ion-icon> الالعاب</button>
+                                <li><button onclick="window.location='blogs'"><ion-icon name="newspaper"></ion-icon> المقالات</button>
+                                <li><button onclick="window.location='contact'"><ion-icon name="call"></ion-icon> تواصل معنا</button></li>
+                                <li><button onclick="window.location='talk to animals'"><ion-icon name="chatbubbles"></ion-icon> تحدث مع الحيوانات </button></li>
         
                             </ul>
                         </div>

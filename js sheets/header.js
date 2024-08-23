@@ -46,17 +46,17 @@ var header = `
                     <ion-icon name="close-outline"></ion-icon>
                 </button>
                 <div class="container">
-                    <div></div>
+                    <div class="logo"><img src="imgs/chatbot icon.png" alt=""></div>
                     <div id="links">
                         <div class="webLinks">
                             <ul>
-                                <li><button onclick="window.location='index'"> home</button></li>
-                                <li><button onclick="window.location='about'"> about</button></li>
-                                <li><button onclick="window.location='video'"> videos</button>
-                                <li><button onclick="window.location='sort game'"> games</button>
-                                <li><button onclick="window.location='blogs'"> blogs</button>
-                                <li><button onclick="window.location='contact'"> contact</button></li>
-                                <li><button onclick="window.location='talk to animals'"> talk to animals</button></li>
+                                <li><button onclick="window.location='index'"><ion-icon name="home"></ion-icon> home</button></li>
+                                <li><button onclick="window.location='about'"><ion-icon name="person"></ion-icon> about</button></li>
+                                <li><button onclick="window.location='video'"><ion-icon name="play-circle"></ion-icon> videos</button>
+                                <li><button onclick="window.location='sort game'"><ion-icon name="game-controller"></ion-icon> games</button>
+                                <li><button onclick="window.location='blogs'"><ion-icon name="newspaper"></ion-icon>  blogs</button>
+                                <li><button onclick="window.location='contact'"><ion-icon name="call"></ion-icon> contact</button></li>
+                                <li><button onclick="window.location='talk to animals'"><ion-icon name="chatbubbles"></ion-icon> talk to animals</button></li>
         
                             </ul>
                         </div>

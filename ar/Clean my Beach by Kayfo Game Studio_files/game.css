@@ -1,0 +1,172 @@
+#wrapper{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.html_embed_widget{
+    width: 100%;
+    margin: 0 auto;
+}
+.html_embed_widget .button.load_iframe_btn,
+.html_embed_widget .button.restore_btn {
+  height: auto;
+  padding: 0.4em 0.8em;
+  font-size: 120%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #2a6900;
+  color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.html_embed_widget .button.load_iframe_btn .svgicon,
+.html_embed_widget .button.restore_btn .svgicon {
+  margin-right: 5px;
+}
+.html_embed_widget .iframe_placeholder,
+.html_embed_widget .restore_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.html_embed_widget .game_frame {
+  margin: 0 auto;
+  position: relative;
+  background-position: 50% 50%;
+}
+.html_embed_widget .game_frame.maximized {
+  margin: 0;
+  width: 100% !important;
+  height: 100% !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-image: none;
+}
+.html_embed_widget .game_frame.maximized .restore_wrapper {
+  display: none;
+}
+.html_embed_widget .game_frame.game_pending .fullscreen_btn {
+  display: none;
+}
+.html_embed_widget
+  .game_frame.start_maximized.game_loaded:not(.maximized)
+  iframe {
+  display: none;
+}
+.html_embed_widget
+  .game_frame.start_maximized.game_loaded:not(.maximized)
+  iframe:-webkit-full-screen {
+  display: block;
+}
+.html_embed_widget
+  .game_frame.start_maximized.game_loaded:not(.maximized)
+  iframe:-moz-full-screen {
+  display: block;
+}
+.html_embed_widget
+  .game_frame.start_maximized.game_loaded:not(.maximized)
+  iframe:-o-full-screen {
+  display: block;
+}
+.html_embed_widget
+  .game_frame.start_maximized.game_loaded:not(.maximized)
+  iframe:fullscreen {
+  display: block;
+}
+.html_embed_widget .game_frame:not(.game_loaded) .restore_wrapper {
+  display: none;
+}
+.html_embed_widget .game_frame iframe {
+  height: 0;
+  width: 0;
+  border: 0;
+  box-sizing: border-box;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+}
+.html_embed_widget .fullscreen_btn {
+  opacity: 0.4;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 8px;
+  font-size: 16px;
+  display: block;
+  transition: opacity 0.4s;
+  background: none;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+.html_embed_widget .fullscreen_btn img {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.html_embed_widget .fullscreen_btn:hover {
+  opacity: 0.8;
+}
+.html_embed_widget .game_error {
+  font-family: Lato, sans-serif;
+  font-family: var(--itchio_default_font, Lato), sans-serif;
+  font-size: 14px;
+  color: #222;
+  width: 100%;
+  margin: 20px auto;
+  border: 1px solid #efbebe;
+  border-radius: 2px;
+  background: #f9e7e7;
+  line-height: 1.4;
+  box-shadow: 0 0 0 4px white;
+}
+.html_embed_widget .game_error .error_details {
+  margin: 10px 20px;
+}
+.html_embed_widget .game_error .error_details > h3 {
+  color: inherit;
+  font-size: inherit;
+  margin: 0 0 10px 0;
+}
+.html_embed_widget .game_error .error_help {
+  border-top: 1px solid #f4d2d2;
+  color: #222;
+  padding: 10px 20px;
+}
+#mobile{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    min-height: 50vh;
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+        text-decoration: underline;
+    }
+}
+@media screen and (max-width: 975px) {
+    #wrapper {
+        display: none;
+    }
+    #mobile{
+        display: flex;
+    }
+}

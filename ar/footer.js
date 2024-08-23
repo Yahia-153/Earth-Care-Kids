@@ -8,7 +8,7 @@ var footer = `
             <li><button onclick="window.location='index.html'"><ion-icon name="home"></ion-icon> الصفحة الرئيسية</button></li>
             <li><button onclick="window.location='about.html'"><ion-icon name="person"></ion-icon> عنّا</button></li>
             <li><button onclick="window.location='video.html'"><ion-icon name="play-circle"></ion-icon> الفيديوهات</button></li>
-            <li><button onclick="window.location='sort game.html'"><ion-icon name="game-controller"></ion-icon> الالعاب</button>
+            <li><button onclick="window.location='Clean my Beach by Kayfo Game Studio.html'"><ion-icon name="game-controller"></ion-icon> الالعاب</button>
             <li><button onclick="window.location='blogs.html'"><ion-icon name="newspaper"></ion-icon> المقالات</button>
             <li><button onclick="window.location='contact.html'"><ion-icon name="call"></ion-icon> تواصل معنا </button></li>
             <li><button onclick="window.location='talk to animals.html'"><ion-icon name="chatbubbles"></ion-icon> تحدث مع الحيوانات </button></li>
